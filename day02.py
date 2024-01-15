@@ -77,7 +77,7 @@ second_number = int(input("Second number : "))
 
 # 2번째 방법
 print(f'몫은 {divmod(first_number, second_number)[0]} 나머지는 {divmod(first_number, second_number)[1]}입니다.')
-'''
+
 #진수
 dec = 65
 octal = 0o101
@@ -87,5 +87,8 @@ print(dec, octal, hexadecimal, binary)
 print(chr(dec), chr(octal), chr(hexadecimal), chr(binary)) #chr : 아스키코드로 바꿔주는 코드
 
 
-
-
+print(ord('B'), ord('Z'), ord('a'), ord('2'))
+'''
+#(100F -32) X 5/9 = C
+fahrenheit = float(input("Input Fahrenheit : ")) #float : 실수
+print(f'fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5/9)}C')
