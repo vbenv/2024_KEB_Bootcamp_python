@@ -21,3 +21,13 @@ print(subjects)
 # print(21000)
 # print(21_000)
 
+#SyntaxError: cannot assign to literal here
+#"univ" = "Inha University" # 리터럴은 보통 오른쪽에 위치.
+# 99 = 71 정수형 리터럴
+
+# Ok
+# case sensitive
+abc = 7
+# 9test = 5
+_9test = 6
+# False = 123 reserved word
