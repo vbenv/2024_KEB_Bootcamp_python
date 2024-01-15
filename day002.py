@@ -36,3 +36,10 @@ print(subjects)
 print(type(3.14))
 print(type(3.14) == float)
 print(isinstance(55, float)) # isinstance(*,type) : 특정 타입의 객체 확인
+
+a = [2,4,99]
+b = a
+a[0] = 1
+print(a)
+print(b)
+
