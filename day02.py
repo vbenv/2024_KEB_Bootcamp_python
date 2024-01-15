@@ -33,6 +33,7 @@ print(subjects)
 # _9test = 6
 # False = 123 reserved word
 
+#숫자
 print(type(3.14))
 print(type(3.14) == float)
 print(isinstance(55, float)) # isinstance(*,type) : 특정 타입의 객체 확인
@@ -43,3 +44,15 @@ a[0] = 1
 print(a)
 print(b)
 
+money = 5,000,000
+print(money)
+print(type(money)) #tuple
+cash = 5_000_000
+print(cash)
+print(type(cash)) #int
+
+
+
+base_number = int(input('Input base number : '))
+exponent_number = int(input('Input base number : '))
+print(f'밑은 {base_number}, 지수는{exponent_number}, 결과 값은 {base_number**exponent_number}')
