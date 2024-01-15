@@ -1,3 +1,4 @@
+'''
 univ = "Inha university"
 print(univ)
 print(univ[5])
@@ -8,7 +9,7 @@ print(subjects)
 print(subjects[3])
 subjects[3] = 'data structrue & algorithm' #mutable
 print(subjects)
-
+'''
 
 # print(0.1)
 # print(1e-1)
@@ -27,7 +28,11 @@ print(subjects)
 
 # Ok
 # case sensitive
-abc = 7
+# abc = 7
 # 9test = 5
-_9test = 6
+# _9test = 6
 # False = 123 reserved word
+
+print(type(3.14))
+print(type(3.14) == float)
+print(isinstance(55, float)) # isinstance(*,type) : 특정 타입의 객체 확인
