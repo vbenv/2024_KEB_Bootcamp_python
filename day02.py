@@ -66,7 +66,7 @@ exponent_number = int(input('Input base number : '))
 #print('밑은 %d, 지수는 %d, 결과 값은 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
 
 #나누기
-'''
+
 first_number = int(input("First number : "))
 second_number = int(input("Second number : "))
 # 1번째 방법
@@ -77,4 +77,15 @@ second_number = int(input("Second number : "))
 
 # 2번째 방법
 print(f'몫은 {divmod(first_number, second_number)[0]} 나머지는 {divmod(first_number, second_number)[1]}입니다.')
+'''
+#진수
+dec = 65
+octal = 0o101
+hexadecimal = 0x41
+binary = 0b01000001
+print(dec, octal, hexadecimal, binary)
+print(chr(dec), chr(octal), chr(hexadecimal), chr(binary)) #chr : 아스키코드로 바꿔주는 코드
+
+
+
 
