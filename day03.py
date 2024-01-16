@@ -1,23 +1,8 @@
-#예외 발생 시 대처
-subjects = "python c database linux"
+# formating
+print('%s' % 42) # old version
 
-subject = input("수강신청과목 입력 : ")
+print('%e' % 0.703)
 
-try:
-    print(f"해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.")
-except ValueError:
-    print('해당 과목이 존재하지 않습니다.')
-
-print(subjects[subjects.find(subject)])
-#Q.subjects에 없는 과목 입력하면 에러가 뜬다는 데 안 뜸
-if subjects.find(subject) != -1:
-    print("있습니다")
-else:
-    print("없습니다.")
-
-# is를 포함하는 함수는 대부분 bool형이다.
-print(subjects.isalnum())
-
-#capitalize, title, upper, lower, swapcase,
-setup = 'a duck goes into a bar'
-print(setup.capitalize())
+#new version
+subjects = {'python' : 'kim', 'c++' : 'sung', 'data structure' : 'kim', 'data base' : 'kang'}
+print("{0[c++]} {0[data structure]}".format(subjects))  # 숫자는 인덱스 번호를 의미. 그 안에 있는 것은 키 값을 불러옴. 그 키 값에 해당하는 value값 불러옴
