@@ -6,7 +6,7 @@ is_prime = True
 if number < 2:
     print(f'{number} is NOT prime number!')
 else:
-    for i in ragne(2, number):
+    for i in range(2, number):
         if number % i == 0:
             is_prime = False
             break
