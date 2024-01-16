@@ -1,66 +1,51 @@
-choice = int(input("문제를 골라주세요. \n 1) 화씨를 섭씨로 변환 2) 화씨 또는 섭씨 변환 3)소수 판정 4)구간 소수 5)QUIT\n : "))
-#1번 : 화씨 -> 섭씨 변환
-if choice == 1:
-    fahrenheit = float(input('Input Fahrenheit : '))
-    print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
+#2번 과제. 연습문제 143P.
+
+#6.1 for 문으로 리스트[3,2,1,0]를 출력
+# list = [3,2,1,0]
+# for i in list:
+#     print(i)
+
+
+'''
+6.2 guess_me 변수에 7을 할당하고, number 변수에 1을 할당한다. 
+number와 guess_me 를 비교하는 while 문을 작성해보자. 
+number가 guess_me보다 작으면 ' too Low'를 출력 한다. 
+number와 guess_me가 같으면 'found it!'을 출력하고 반복문을 종료한다. 
+number 가 guess_me보다 크면 'oops'를 출력하고 반복문을 종료한다. 
+그리고 반복문의 마지막에 number를 1씩 증가시킨다.
+'''
+# guess_me = 7
+# number = 1
+#
+# while True:
+#     if number < guess_me:
+#         print("'too Low'")
+#         number += 1
+#     elif number == guess_me:
+#         print("'foud it!'")
+#         break
+#     else:
+#         print("'oops")
+#         break
 
 
 
 
-# 2번 : 화씨 또는 섭씨 변환
-if choice == 2:
-    menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Quit program : ")
 
-    if menu == '1':
-        fahrenheit = float(input('Input Fahrenheit : '))
-        print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
-    elif menu == '2':
-        celsius = float(input('Input Celsius : '))
-        print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
-    else:
-        print('Terminate Program.')
+'''
+6.3 guess_me 변수에 5를 할당하고, for 문을 사용하여 range(10)에서 number 변수를 사용 한다. 
+number가 guess_me보다 작으면 too low를 출력한다. number와 guess_me가 같으면 found it!'을 출력하고 반복문을 종료한다. 
+number 가 guess_me보다 크면 0ops'를 출력하고 반복문을 종료한다.
+'''
 
-
-
-
-
-# 3번 : 소수 판정
-if choice == 3:
-    number = int(input("input number : "))
-    is_prime = True
-    if number < 2:
-        print(f'{number} is NOT prime number!')
-    else:
-        for i in range(2, number):
-             if number % i == 0:
-                 is_prime = False
-                 break
-        if is_prime:
-            print(f'{number} is prime number')
-        else:
-            print(f'{number} is NOT prime number!')
-
-
-# 4번 : 구간소수
-if choice == 4:
-    numbers = input("input first second number : ").split()
-    n1 = int(numbers[0])
-    n2 = int(numbers[1])
-
-    if n1 > n2:
-        n1, n2 = n2, n1
-
-    for number in range(n1, n2+1):
-        is_prime = True
-
-        if number < 2:
-            pass
-        else:
-            for i in range(2, number):
-                if number % i == 0:
-                    is_prime = False
-                    break
-            if is_prime: print(number, end=' ')
-
-if choice == 5:
-    print("Terminate Program")
+# guess_me = 5
+# for number in range(10):
+#     if number < guess_me:
+#         print("'too Low'")
+#         print(number)
+#     elif number == guess_me:
+#         print("'foud it!'")
+#         continue
+#     else:
+#         print("'oops")
+#         break
