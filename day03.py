@@ -1,5 +1,6 @@
 #예외 발생 시 대처
-subjects = "python c++ database linux"
+subjects = "python c database linux"
+
 subject = input("수강신청과목 입력 : ")
 
 try:
@@ -13,3 +14,10 @@ if subjects.find(subject) != -1:
     print("있습니다")
 else:
     print("없습니다.")
+
+# is를 포함하는 함수는 대부분 bool형이다.
+print(subjects.isalnum())
+
+#capitalize, title, upper, lower, swapcase,
+setup = 'a duck goes into a bar'
+print(setup.capitalize())
