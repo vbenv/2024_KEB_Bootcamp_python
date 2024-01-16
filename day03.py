@@ -1,18 +1,17 @@
-#6장반복문
 # prime number
-number = int(input("input number : "))
+numbers = input("input first second number : ").split()     # -> list 따라서, 여기선 int로 못 바꿈.
+n1 = int(numbers[0])
+n2 = int(numbers[1])
 
-is_prime = True
-if number < 2:
-    print(f'{number} is NOT prime number!')
-else:
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-            break
+for number in range(n1, n2+1):
+    is_prime = True
 
-
-    if is_prime:
-        print(f'{number} is prime number')
+    if number < 2:
+        pass
     else:
-        print(f'{number} is NOT prime number!')
+        for i in range(2, number):
+            if number % i == 0:
+                is_prime = False
+                break
+        if is_prime: print(number, end=' ')
+
