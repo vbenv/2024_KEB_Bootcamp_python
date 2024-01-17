@@ -1,34 +1,54 @@
-import random
+# #8장 연습문제
+# #8.1
+# e2f = dict(dog = 'chien', cat = 'chat', walrus = 'morse')
+# print(e2f)
+#
+# #8.2
+# print(e2f['walrus'])
+# print(e2f.get('walrus'))
+#
+# #8.3
+# f2e = e2f.items()
+# print(f2e)
+#
+# #8.4
+# aa = e2f.keys()
+# bb = e2f.values()
+# e2f_reverse = dict(zip(bb,aa))
+# print(e2f_reverse)
+# print(e2f_reverse['chien'])
+#
+# #8.5
+# print(aa)
+# print(e2f.keys())
+#
+# #8.6 이차원 딕셔너리
+# life ={
+#     'animal' : {'cats' : 'henri', 'octopi' : 'Grumpy', 'emus' : 'Lucy'}
+#     , 'plants' : '',
+#     'other' : ''}
+# #8.7
+# print(life.keys())
+#
+# #8.8
+# for i in life['animal'].keys():
+#     print(i)
+# print(life['animal'].keys())
+# #8.9
+# print(life['animal']['cats'])
+#8.10
+#letter_counts = {letter : word.count(letter) for letter in world} #{키_표현식 : 값_표현식 For 표현식 in 객체}
+t = []
+for i in range(10):
+    #print(i)
+    q = i**2
+    t.append(q)
+print(t)
+Q = [i**2 for i in range(10)]
+print(Q)
+squares_keys = [i for i in range(10)]
 
-drinks_foods = {"위스키" : "초콜릿", "와인" : "치즈", "소주" : "삼겹살", "고량주" : "양꼬치"}
-# print(drinks_foods.pop("위스키"))
-# print(drinks_foods)
-#del drinks_foods["위스키"]
-#drinks_foods["사케"] = "광어회"
-japan_drinks_foods = {"사케" : "광어회", "위스키" : "낙곱새"}
-drinks_foods.update(japan_drinks_foods)
-# drink = input(drinks_foods.keys())
-drinks_foods_keys = list(drinks_foods)
-# print(drinks_foods_keys)
-#print(random.choice(drinks_foods_keys))     #랜덤 -> 시퀀스 내 아무거나 -> 초이스가 하나 골라줌
-
-while True:
-    menu = input(f'다음 술 중에 고르세요. \n1) {drinks_foods_keys[0]},  2) {drinks_foods_keys[1]},  3) {drinks_foods_keys[2]},  4) {drinks_foods_keys[3]},   5) {drinks_foods_keys[4]}   6) 대신 골라줄래요?,   7) 먹고 싶은 게 없네요.')
-    if menu == '1': #숫자로 쓰면 안됨
-        print(f'{drinks_foods_keys[0]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[0]]} 입니다.')
-    elif menu == '2':
-        print(f'{drinks_foods_keys[1]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[1]]} 입니다.')
-    elif menu == '3':
-        print(f'{drinks_foods_keys[2]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[2]]} 입니다.')
-    elif menu == '4':
-        print(f'{drinks_foods_keys[3]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[3]]} 입니다.')
-    elif menu == '5':
-        random_drink = random.choice(drinks_foods_keys)
-        print(f'{drinks_foods_keys[4]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[4]]} 입니다.')
-    elif menu == '6':
-        random_drink = random.choice(drinks_foods_keys)
-        print(f'{random_drink}에 어울리는 안주는 {drinks_foods[random_drink]} 입니다.')
-    elif menu == '7':
-        print(f'다음에 또 오세요')
-        break
+squares = {squares_keys : i**2 for i in range(10)}
+print(squares)
+#print(squares)
 
