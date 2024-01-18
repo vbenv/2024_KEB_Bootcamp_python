@@ -1,19 +1,13 @@
-#함수의 클로저
+#매핑 / 맵
 
-#inner 함수의 개념
-# def out_func(nout):
-#     def inner_func(nin):
-#         return nin * nin
-#     return inner_func(nout)
-# print(out_func(5))
+#기존 리스트 내 원소들의 합하는 방법
+# numbers = ["7", "-11", "3"]
+# hap = 0
+# for number in numbers:
+#     hap += int(number)
+# print(hap)
 
-#closures
-def out_func(nout):
-    def inner_func():
-        return nout * nout
-    return inner_func   #함수 이름만 던져주면 된다.
-
-x = out_func(9)
-print(type(x))
-print(x)
-print(x())
+#맵을 사용해서 원소들의 합을 하는 방법
+numbers = ["7", "-11", "3"]
+print(sum(map(int, numbers)))
+#리스트 원소들 전부에 int를 적용한다.
