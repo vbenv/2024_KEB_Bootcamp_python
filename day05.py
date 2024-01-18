@@ -1,12 +1,15 @@
-#매개변수, 인수
-#none <-> False 구분.
-#위치 인수 / 키워드 / 기본 매개변수; 바꿀 수 있음
-def a(n1,n2):
-    print(n1,n2)
-def a(n):
-    print(n)
+def squares(*n) -> list:
+    '''
+    넘겨 받은 수치 데이터들의 거듭제곱 값을 리스트에 담아서 리턴
+    :param n: tuple
+    :return: list
+    '''
+    return [pow(i,2) for i in n]
+    #return n * n
 
-a(7)
-a(7,11)
-# 자바 or c에서는 두 개 다 오버라이딩 되어 출력되나 파이썬에서는 지원하지 않음.
+def run_function(f, *number) -> list:   #(positional arguments, *변수)
+    return f(*number) #함수의 결과값.
+
+print(squares(7, 5, 2))
+print(run_function(squares, 9, 10))
 
