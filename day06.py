@@ -1,33 +1,55 @@
+class FlyingMixin:
+	def fly(self):
+		return f"{self.name}이(가) 하늘을 훨훨 날아갑니다~"
+
+class SwimmingMixin:
+	def swim(self):
+		return f"{self.name}이(가) 수영을 합니다."
+
 class Pokemon:
 	def __init__(self, name):
 		self.name = name
 
-	def attack(self, target):
-		print(f"{self.name}이(가) {target.name}을(를) 공격!")
-
-
-class Pikachu(Pokemon):		#자식클래스이름(부모클래스이름)
-	def __init__(self, name, type):
-		super().__init__(name)
-		self.type = type
-	def attack(self, target):
-		print(f"{self.name}이(가) {target.name}을(를) {self.type}공격!")
-
-	def electric_info(self):
-		print("전기 계열의 공격")
-
-class Squirtle(Pokemon):		#자식클래스이름(부모클래스이름)
+class Charizard(Pokemon, FlyingMixin):
 	pass
 
-p1 = Pikachu("피카츄","전기") 	#("이름", "타입")
-p2 = Squirtle("꼬부기")
-p3 = Pokemon("아무개")
-p1.electric_info()
-#p3.electric_info()
-p1.attack(p2)
-p2.attack(p1)
+class Gyarados(Pokemon, SwimmingMixin):
+	pass
 
-print(p1.name, p1.type)
-print(issubclass(Pikachu, Pokemon))		#상속 구조를 확인해볼 때 사용
+g1 = Gyarados("갸라도스")
+c1 = Charizard("리자몽")
+print(c1.fly())		#하늘을 나는 것만 가져다 씀.
+print(g1.swim())
 
 
+
+
+
+# class Animal:
+# 	def says(self):
+# 		return 'I speak!'
+#
+# class Horse(Animal):
+# 	def says(self):
+# 		return "heee"
+#
+# class Donkey(Animal):
+# 	def says(self):
+# 		return "HOooo"
+#
+# class Mule(Donkey, Horse):
+# 	#def says(self):
+# 	#return '노새 노새 젊어서 노새~'
+# 	pass
+#
+# class Hinny(Horse, Donkey):
+# 	#def says(self):
+# 		#return '버새 버새'
+# 	pass
+# # mule에 있는 says 없으면->Donkey -> Horse->그의 부모인 animal
+# m1 = Mule()
+# m2 = Hinny()
+# print(m1.says())
+# print(m2.says())
+#
+# print(Hinny.__mro__)
