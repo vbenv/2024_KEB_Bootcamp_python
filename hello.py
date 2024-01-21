@@ -1,30 +1,22 @@
-def description(f):  # closure
-    def inner(*args):
-        print(f.__name__)
-        print(f.__doc__)
-        r = f(*args)
-        return r
+class Bill():
+    def __init__(self,des):
+        self.des= des
 
-    return inner
+class Tail():
+    def __init__(self,length):
+        self.length = length
+class Duck():
+    def __init__(self,bill,tail):
+        self.bill = bill
+        self.tail = tail
+    def about(self):
+        print("this duck ahs a",
+              self.bill.description,
+              "bill and a",
+              self.tail.length,
+              'tail')
+a_tail = Tail('long')
+a_bill = Bill('wide orange')
+duck = Duck(a_bill, a_tail)
+duck.about()
 
-
-def squares(n):
-    """
-    제곱 함수
-    """
-    return n * n
-
-@description
-def power(b, e):
-    """
-    거듭제곱 함수
-    """
-    result = 1
-    for _ in range(e):
-        result = result * b
-    return result
-
-
-f1 = description(squares)
-print(f1(9))
-print(power(2, 10))
