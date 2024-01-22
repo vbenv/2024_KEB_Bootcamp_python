@@ -18,7 +18,8 @@ if player == '3':
     player = "우솝"
     print("당신은 우솝을 고르셨습니다.")
 
-class Player():
+print("다음은 포켓몬을 고르실 차례입니다. 당신의 인생 동반자를 골라주세요 : "
+      "")
 
 
 class FlyingMixin:
