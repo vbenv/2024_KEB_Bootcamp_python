@@ -18,11 +18,11 @@ class FlyWithWings(FlyingBehavior):
         return f"날개로 하늘을 훨훨 날아갑니다"
 
 class Pikachu:
-    def __init__(self, name, hp, fly):
+    def __init__(self, name, hp):
         self.name = name
         self.hp = hp
-        self.fly_behavior = fly # flybehavior 클래스를 받는 것, aggregation
+        self.fly_behavior = NoFly() # composition 객체가 피카츄 안에 생성됨, 따라서 fly_behavior받는 변수도 없어도 되는 것임.
 
 nofly = NoFly()
-p1 = Pikachu("피카츄", 35, nofly)
+p1 = Pikachu("피카츄", 35)
 print(p1.fly_behavior.fly())
