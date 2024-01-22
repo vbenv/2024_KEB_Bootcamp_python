@@ -43,7 +43,8 @@ class Pokemon:
     @name.setter
     def name(self, new_name):
         self.__name = new_name
-
+    def __add__(self, target):
+        return return f"두 포켓몬스터 체력의 합은 {self.hp + target.hp} 입니다."
    # name = property(get_name, set_name)
 
 
